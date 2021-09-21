@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GitHub Enterprise Training</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      .remark-slide-content h1 { font-size: 3em; }
+      .remark-slide-content h2 { font-size: 2em; }
+      .remark-slide-content h3 { font-size: 1.6em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code-line-highlighted     { background-color: #373832; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+name: inverse
+class: center, middle, inverse
+
+# Test Development Team
+.footnote[Mason Lin]
+
+---
+
+# What!? Team leader in a Scrum team?
+
+*Usually, TL has those jobs*
+-   Responsible for developing the increment
+-   Assign tasks
+-   Make technical decisions
+-   Provide estimates to management
+-   Talk to outside people
+
+---
+
+# What!? Team leader in a Scrum team?
+
+*In Scrum Team, those jobs is down by the team*
+
+-   Responsible for developing the increment
+  - The development team, not the team leader
+
+-   Assign tasks
+  - do it in the daily standup, pick tasks when you complete previous one
+
+-   Make technical decisions
+  - all team members should have an equal say when it comes to technological aspects.
+
+-   Provide estimates to management
+  - do it in the planning meeting, estimate by voting
+
+-   Talk to outside people
+  - Talking to outside people is done both by the SM (for removing impediments) and the team (everything else).
+---
+# What!? Team leader in a Scrum team?
+
+*Sounds good but...*
+
+- 但我們現在是不是會對~~SM~~ PM問責...?
+
+- [In a Fake Scrum, regardless of whether the TL becomes the PO or SM, the delivery accountability is still kept with the TL](https://less.works/blog/2020/07/21/team-leader-vs-PO-SM.html)
+
+- Having a TL is a alternatives before we are ready for organizational redesign to adopt real Scrum
+
+
+---
+
+# What!? Team leader in a Scrum team?
+
+-   Its the responsibility of the team leader to build an efficient team that is autonomous and **self-organized**
+-   We have different roles in the Scrum Team to ensure the team is self sufficient to deliver the increment
+  -   Like the DB expert can contribute for better delivery of the DB aspects
+  -   Team leader could use his leadership skills to lead the team to make the right decisions
+
+- 我們為什麼要有 TL，這角色能給團隊帶來什麼?
+  -   團隊中有一個人專注於團隊自組織這個目標
+  -   他會持續學習並利用所學讓團隊往更好的方向發展
+
+---
+
+# Team leader == pre scrum master
+
+-   Do fake Scrum on the component
+  -   暫時負責決定任務排序 consolidate all component work and prioritize (i.e. what the fake PO does)
+  -   引導團隊自組織交付 coach the team to self-organize for delivering the component (i.e. what the SM does)
+
+-   Shift focus to the product and features
+  -   連結產品與任務 connect component work to the product and features
+  -   連結團隊與 PO connect component team to the real PO
+  -   協助團隊與跨團隊合作 coach team to self-organize with other component teams in delivering features
+  -   讓 PO 能更專注於產品本身 coach the real PO to inspect & adapt on the product
+
+-   Advocate for organizational redesign
+  -   組織跨職能學習 prepare with cross-learning and technical excellence
+  -   分享知識與經驗 spread the knowledge and experience on organizational redesign towards feature teams
+
+---
+- ![Real Scrum](rnr.drawio.svg)
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
